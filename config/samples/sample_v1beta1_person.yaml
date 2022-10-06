@@ -1,0 +1,7 @@
+apiVersion: sample.siming.io/v1beta1
+kind: Person
+metadata:
+  name: person-sample
+spec:
+  firstName: Siming
+  lastName: Weng

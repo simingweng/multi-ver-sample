@@ -1,0 +1,33 @@
+componentConfig: true
+domain: siming.io
+layout:
+- go.kubebuilder.io/v3
+plugins:
+  manifests.sdk.operatorframework.io/v2: {}
+  scorecard.sdk.operatorframework.io/v2: {}
+projectName: multi-ver-sample
+repo: github.com/simingweng/multi-ver-sample
+resources:
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: siming.io
+  group: sample
+  kind: Person
+  path: github.com/simingweng/multi-ver-sample/api/v1alpha1
+  version: v1alpha1
+  webhooks:
+    conversion: true
+    webhookVersion: v1
+- domain: siming.io
+  group: sample
+  kind: Person
+  path: github.com/simingweng/multi-ver-sample/api/v1beta1
+  version: v1beta1
+  webhooks:
+    conversion: true
+    defaulting: true
+    validation: true
+    webhookVersion: v1
+version: "3"

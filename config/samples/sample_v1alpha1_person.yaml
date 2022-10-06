@@ -1,0 +1,6 @@
+apiVersion: sample.siming.io/v1alpha1
+kind: Person
+metadata:
+  name: person-sample
+spec:
+  name: Siming,Weng
